@@ -27,6 +27,341 @@
     </android.support.v4.widget.DrawerLayout>
 
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="454dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/cardview_shadow_end_color"
+                app:cardCornerRadius="7dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/card01image"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/mojov3front_2" />
+
+                    <TextView
+                        android:id="@+id/card01title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card01image"
+                        android:maxLines="1"
+                        android:padding="4dp"
+                        android:text="  Student booked consultation"
+                        android:textColor="#222"
+                        android:textStyle="bold"
+                        android:textSize="22dp" />
+
+                    <TextView
+                        android:id="@+id/card01about"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card01title"
+                        android:maxLines="1"
+                        android:padding="4dp"
+                        android:text="   MOJO issues"
+                        android:textColor="#666"
+                        android:textSize="14dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="102dp"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginStart="13dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:paddingTop="220dp">
+
+                        <Button
+                            android:id="@+id/card01details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DETAILS"
+                            android:textSize="14dp" />
+
+                        <Button
+                            android:id="@+id/card01accept"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ACCEPT"
+                            android:textSize="14dp" />
+
+                        <Button
+                            android:id="@+id/card01reject"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="REJECT"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/card01time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:text="2:00pm"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="4dp"
+                        android:textColor="#666"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/cardview_shadow_end_color"
+                app:cardCornerRadius="7dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/card02image"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/sutd_classroom" />
+
+                    <TextView
+                        android:id="@+id/card02title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card02image"
+                        android:maxLines="1"
+                        android:padding="4dp"
+                        android:text="  50.002 consultation starting soon"
+                        android:textColor="#222"
+                        android:textStyle="bold"
+                        android:textSize="22dp" />
+
+                    <TextView
+                        android:id="@+id/card02about"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card02title"
+                        android:maxLines="1"
+                        android:padding="4dp"
+                        android:text="   1 hour to go!"
+                        android:textColor="#666"
+                        android:textSize="14dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="102dp"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginStart="13dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:paddingTop="220dp">
+
+                        <Button
+                            android:id="@+id/card02details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DETAILS"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/card02time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:text="10:00am"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="4dp"
+                        android:textColor="#666"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/cardview_shadow_end_color"
+                app:cardCornerRadius="7dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/card03image"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/comment" />
+
+                    <TextView
+                        android:id="@+id/card03title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card03image"
+                        android:maxLines="1"
+                        android:padding="4dp"
+                        android:text="  Student replied to comment"
+                        android:textColor="#222"
+                        android:textStyle="bold"
+                        android:textSize="22dp" />
+
+                    <TextView
+                        android:id="@+id/card03about"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card03title"
+                        android:maxLines="1"
+                        android:padding="4dp"
+                        android:text="   1D Checkoff 1 - Errors must test the ALU and ..."
+                        android:textColor="#666"
+                        android:textSize="14dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="102dp"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginStart="13dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:paddingTop="220dp">
+
+                        <Button
+                            android:id="@+id/card03view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="VIEW"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/card03time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:text="yesterday at 11:18pm"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="4dp"
+                        android:textColor="#666"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/cardview_shadow_end_color"
+                app:cardCornerRadius="7dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/card04image"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cancelled" />
+
+                    <TextView
+                        android:id="@+id/card04title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card04image"
+                        android:maxLines="1"
+                        android:padding="4dp"
+                        android:text="  Student cancelled consultation"
+                        android:textColor="#222"
+                        android:textStyle="bold"
+                        android:textSize="22dp" />
+
+                    <TextView
+                        android:id="@+id/card04about"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card04title"
+                        android:maxLines="1"
+                        android:padding="4dp"
+                        android:text="   50.002 - Sorry Prof, I'm not feeling well today ..."
+                        android:textColor="#666"
+                        android:textSize="14dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="102dp"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginStart="13dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:paddingTop="220dp">
+
+                        <Button
+                            android:id="@+id/card04details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DETAILS"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/card04time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:text="yesterday at 5:41pm"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="4dp"
+                        android:textColor="#666"
+                        android:textSize="14dp" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <FrameLayout
         android:id="@+id/fragmentholder"
@@ -42,71 +377,6 @@
             android:visibility="visible"
             app:menu="@menu/studbottom_navigation_menu" />
 
-        <TextView
-            android:id="@+id/card01title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/linearLayout"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:text="Student has requested for consultation"
-            android:textSize="24dp" />
-
-        <ImageView
-            android:id="@+id/sutdlogo"
-            android:layout_width="376dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:src="@mipmap/mojov3front_2" />
-
-
     </FrameLayout>
-
-    <TextView
-        android:id="@+id/card01about"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="MOJO Issues"
-        android:textSize="12dp"/>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="102dp"
-        android:orientation="horizontal"
-        android:layout_marginLeft="13dp"
-        android:layout_marginStart="13dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <Button
-            android:id="@+id/card01accept"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ACCEPT"
-            android:textSize="14dp" />
-
-        <Button
-            android:id="@+id/card01details"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="DETAILS"
-            android:textSize="14dp" />
-
-        <Button
-            android:id="@+id/card01reject"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="REJECT"
-            android:textSize="14dp" />
-
-    </LinearLayout>
 
 </RelativeLayout>
