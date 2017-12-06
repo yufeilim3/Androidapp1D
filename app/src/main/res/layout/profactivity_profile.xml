@@ -21,8 +21,240 @@
             android:layout_gravity="start"
             android:background="#FFFFFF"
             app:menu="@menu/profnav_bar" />
-    </android.support.v4.widget.DrawerLayout>
 
+    </android.support.v4.widget.DrawerLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="67dp"
+                android:layout_height="87dp"
+                android:layout_gravity="left"
+                android:src="@mipmap/pandaavatar"
+                android:layout_alignTop="@+id/text"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="13dp"
+                android:layout_marginStart="13dp" />
+
+            <TextView
+                android:id="@+id/displayname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="14dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="14dp"
+                android:layout_toEndOf="@+id/imageView"
+                android:layout_toRightOf="@+id/imageView"
+                android:ems="10"
+                android:fontFamily="casual"
+                android:text="Display Name"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/imageView"
+                android:layout_marginTop="69dp"
+                android:background="#FFF"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/cardView">
+
+                <TextView
+                    android:id="@+id/bookingsettings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="casual"
+                    android:text="Booking Settings"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/settingsicon"
+                    android:layout_width="31dp"
+                    android:layout_height="37dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@mipmap/settingsicon"/>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/cardView"
+                android:background="#FFF"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/cardView2">
+
+                <ImageView
+                    android:id="@+id/passwordicon"
+                    android:layout_width="31dp"
+                    android:layout_height="37dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@mipmap/changepwicon" />
+
+                <TextView
+                    android:id="@+id/changepw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="casual"
+                    android:text="Change Password"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="300dp"
+                android:layout_height="62dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/cardView2"
+                android:background="#FFF"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/cardView3">
+
+                <ImageView
+                    android:id="@+id/prioritysettings"
+                    android:layout_width="31dp"
+                    android:layout_height="37dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@mipmap/prioritysettingicon" />
+
+                <TextView
+                    android:id="@+id/priorityset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="casual"
+                    android:text="Priority Settings"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="300dp"
+                android:layout_height="62dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/cardView3"
+                android:background="#FFF"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/cardView4">
+
+                <ImageView
+                    android:id="@+id/moduleicon"
+                    android:layout_width="31dp"
+                    android:layout_height="37dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@mipmap/moduleicon" />
+
+                <TextView
+                    android:id="@+id/Modules"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="casual"
+                    android:text="Modules"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="300dp"
+                android:layout_height="62dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/cardView4"
+                android:background="#FFF"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true">
+
+                <ImageView
+                    android:id="@+id/reporticon"
+                    android:layout_width="31dp"
+                    android:layout_height="37dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@mipmap/reporticon" />
+
+                <TextView
+                    android:id="@+id/report"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="casual"
+                    android:text="Report Students"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="300dp"
+                android:layout_height="62dp"
+                android:background="#FFF"
+                android:layout_marginTop="108dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true">
+
+                <ImageView
+                    android:id="@+id/infoicon"
+                    android:layout_width="31dp"
+                    android:layout_height="37dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@mipmap/infoicon" />
+
+                <TextView
+                    android:id="@+id/personalInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="casual"
+                    android:text="Personal Information"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
 
     <FrameLayout
         android:id="@+id/fragmentholder"
@@ -38,35 +270,22 @@
             android:visibility="visible"
             app:menu="@menu/profbottom_navigation_menu" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:layout_width="67dp"
-                android:layout_height="87dp"
-                android:layout_gravity="left"
-                android:src="@mipmap/pandaavatar"
-                android:id="@+id/imageView"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
-            <TextView
-                android:id="@+id/text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:text="Display Name"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginTop="19dp"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
-
-        </RelativeLayout>
-
     </FrameLayout>
 
+    <EditText
+        android:id="@+id/staffID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:inputType="textPersonName"
+        android:text="Staff ID"
+        android:textColor="@android:color/black"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
