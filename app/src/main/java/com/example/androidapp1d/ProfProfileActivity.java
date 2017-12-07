@@ -11,6 +11,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 public class ProfProfileActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
@@ -134,6 +136,34 @@ public class ProfProfileActivity extends AppCompatActivity implements Navigation
         return false;
     }
 
+    public void personalInfoPage (View view){
+        Intent intent = new Intent (this, ProfPersonalInfoPage.class);
+        startActivity(intent);
+    }
 
+    public void reportStudentsPage(View view){
+        Intent intent = new Intent (this, ProfReportStudentsPage.class);
+        startActivity(intent);
+    }
+
+    public void ProfBookingsList(View view){
+        Intent intent = new Intent (this, ProfBookingsPage.class);
+        startActivity(intent);
+    }
+
+    public void changePWpage(View view){
+        Intent intent = new Intent (this, ProfChangePWpage.class);
+        startActivity(intent);
+    }
+
+    public void modulesPage(View view){
+        Intent intent = new Intent (this, ProfModulesList.class);
+        startActivity(intent);
+    }
+
+    public void priorityListpage(View view){
+        Intent intent = new Intent (this, ProfPriorityListPage.class);
+        startActivity(intent);
+    }
 
 }

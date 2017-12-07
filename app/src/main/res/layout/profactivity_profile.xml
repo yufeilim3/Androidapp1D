@@ -29,33 +29,21 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="67dp"
-                android:layout_height="87dp"
+                android:layout_width="70dp"
+                android:layout_height="90dp"
                 android:layout_gravity="left"
                 android:src="@mipmap/pandaavatar"
-                android:layout_alignTop="@+id/text"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginLeft="13dp"
-                android:layout_marginStart="13dp" />
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="5dp"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/displayname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="14dp"
-                android:layout_marginStart="14dp"
-                android:layout_marginTop="14dp"
-                android:layout_toEndOf="@+id/imageView"
-                android:layout_toRightOf="@+id/imageView"
-                android:ems="10"
-                android:fontFamily="casual"
-                android:text="Display Name"
-                android:textColor="@android:color/black"
-                android:textSize="24sp"
-                android:textStyle="bold" />
 
+        </RelativeLayout>
             <android.support.v7.widget.CardView
                 android:layout_width="300dp"
                 android:layout_height="60dp"
@@ -68,14 +56,17 @@
                 android:layout_alignParentEnd="true"
                 android:id="@+id/cardView">
 
-                <TextView
+                <Button
                     android:id="@+id/bookingsettings"
-                    android:layout_width="wrap_content"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="60dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="5dp"
                     android:fontFamily="casual"
+                    android:onClick="ProfBookingsList"
                     android:text="Booking Settings"
+                    android:textAlignment="viewStart"
                     android:textColor="@android:color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -110,14 +101,17 @@
                     android:layout_marginTop="10dp"
                     app:srcCompat="@mipmap/changepwicon" />
 
-                <TextView
+                <Button
                     android:id="@+id/changepw"
-                    android:layout_width="wrap_content"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="60dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="5dp"
                     android:fontFamily="casual"
+                    android:onClick="changePWpage"
                     android:text="Change Password"
+                    android:textAlignment="viewStart"
                     android:textColor="@android:color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -143,17 +137,19 @@
                     android:layout_marginTop="10dp"
                     app:srcCompat="@mipmap/prioritysettingicon" />
 
-                <TextView
+                <Button
                     android:id="@+id/priorityset"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="60dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="5dp"
                     android:fontFamily="casual"
                     android:text="Priority Settings"
                     android:textColor="@android:color/black"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:onClick="priorityListpage"/>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -176,14 +172,17 @@
                     android:layout_marginTop="10dp"
                     app:srcCompat="@mipmap/moduleicon" />
 
-                <TextView
+                <Button
                     android:id="@+id/Modules"
-                    android:layout_width="wrap_content"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="60dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="5dp"
                     android:fontFamily="casual"
+                    android:onClick="modulesPage"
                     android:text="Modules"
+                    android:textAlignment="viewStart"
                     android:textColor="@android:color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -208,14 +207,17 @@
                     android:layout_marginTop="10dp"
                     app:srcCompat="@mipmap/reporticon" />
 
-                <TextView
+                <Button
                     android:id="@+id/report"
-                    android:layout_width="wrap_content"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="60dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="5dp"
                     android:fontFamily="casual"
+                    android:onClick="reportStudentsPage"
                     android:text="Report Students"
+                    android:textAlignment="viewStart"
                     android:textColor="@android:color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -241,14 +243,18 @@
                     android:layout_marginTop="10dp"
                     app:srcCompat="@mipmap/infoicon" />
 
-                <TextView
+                <Button
                     android:id="@+id/personalInfo"
-                    android:layout_width="wrap_content"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="60dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="5dp"
                     android:fontFamily="casual"
+                    android:onClick="personalInfoPage"
                     android:text="Personal Information"
+                    android:textAlignment="viewStart"
                     android:textColor="@android:color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -259,7 +265,10 @@
     <FrameLayout
         android:id="@+id/fragmentholder"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <android.support.design.widget.BottomNavigationView
             android:id="@+id/bottomNavView_Bar"
@@ -272,20 +281,35 @@
 
     </FrameLayout>
 
+    <TextView
+        android:id="@+id/displayname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:text="Display Name"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="83dp"
+        android:layout_marginStart="83dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
     <EditText
         android:id="@+id/staffID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="11dp"
-        android:layout_marginRight="11dp"
-        android:layout_marginTop="56dp"
         android:ems="10"
         android:fontFamily="casual"
         android:inputType="textPersonName"
         android:text="Staff ID"
         android:textColor="@android:color/black"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/displayname"
+        android:layout_alignLeft="@+id/displayname"
+        android:layout_alignStart="@+id/displayname" />
+
 
 </RelativeLayout>

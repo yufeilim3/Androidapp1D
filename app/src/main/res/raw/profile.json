@@ -1,0 +1,14 @@
+[
+  { "name": "Personal Information",
+    "file": "infoicon"},
+  { "name": "Booking Settings",
+     "file": "settingsicon"},
+  { "name": "Change Password",
+    "file": "changepwicon"},
+  { "name": "Priority Settings",
+  "file": "prioritysettingicon"},
+  { "name": "Modules",
+    "file": "moduleicon"},
+  { "name": "Report Students",
+    "file": "reporticon"}
+]
