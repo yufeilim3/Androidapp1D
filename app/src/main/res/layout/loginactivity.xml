@@ -12,13 +12,6 @@
         app:srcCompat="@mipmap/sutd"
         />
 
-    <RadioGroup
-        android:id="@+id/studentorProf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-    </RadioGroup>
-
     <Button
         android:id="@+id/enterapp"
         android:layout_width="match_parent"
@@ -30,12 +23,17 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom="65dp" />
 
+    <RadioGroup
+        android:id="@+id/studentorProf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
     <RadioButton
         android:id="@+id/student"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:checked="true"
+        android:checked="false"
         android:text="Student's Login"
         app:buttonTint="@color/endblue"
         android:layout_above="@+id/prof"
@@ -46,13 +44,15 @@
         android:id="@+id/prof"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/enterapp"
+        android:layout_alignLeft="@+id/student"
+        android:layout_alignStart="@+id/student"
         android:layout_weight="1"
         android:checked="false"
         android:text="Professor's Login"
-        app:buttonTint="@color/endblue"
-        android:layout_above="@+id/enterapp"
-        android:layout_alignLeft="@+id/student"
-        android:layout_alignStart="@+id/student" />
+        app:buttonTint="@color/endblue" />
+
+    </RadioGroup>
 
     <ImageView
         android:id="@+id/usernameicon"
@@ -101,7 +101,8 @@
         android:textStyle="italic"
         android:layout_below="@+id/enterUsername"
         android:layout_alignLeft="@+id/enterUsername"
-        android:layout_alignStart="@+id/enterUsername" />
+        android:layout_alignStart="@+id/enterUsername"
+        android:inputType="textPassword"/>
     />
 
 
