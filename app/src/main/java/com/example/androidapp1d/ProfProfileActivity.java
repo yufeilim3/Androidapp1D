@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class ProfProfileActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     private DrawerLayout drawerLayout;
@@ -31,6 +32,9 @@ public class ProfProfileActivity extends AppCompatActivity implements Navigation
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
         staffid = (EditText) findViewById(R.id.staffID);
+        if(savedInstanceState != null){
+            staffid.setText("Enter your name!", TextView.BufferType.EDITABLE);
+        }
 
 
         actionBar = getSupportActionBar();
@@ -166,4 +170,11 @@ public class ProfProfileActivity extends AppCompatActivity implements Navigation
         startActivity(intent);
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        String edittextvalue = staffid.getText().toString();
+        staffid.setText(edittextvalue); //saving EditText value
+    }
 }

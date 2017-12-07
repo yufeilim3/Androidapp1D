@@ -1,9 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.androidapp1d.ProfChangePWpage">
 
-</android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/change_password" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="Enter your new password below!"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/NewPWheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="casual"
+        android:text="New Password"
+        android:textColor="@android:color/darker_gray"
+        android:textStyle="bold"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/imageView2"
+        android:layout_alignEnd="@+id/imageView2"
+        android:layout_marginRight="59dp"
+        android:layout_marginEnd="59dp"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/enternewpw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/NewPWheader"
+        android:layout_alignStart="@+id/NewPWheader"
+        android:layout_below="@+id/NewPWheader"
+        android:fontFamily="casual"
+        android:inputType="textPassword"
+        android:text="123456789123456789"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/confirmpwheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:fontFamily="casual"
+        android:layout_centerHorizontal="true"
+        android:text="Confirm Password"
+        android:textColor="@android:color/darker_gray"
+        android:textStyle="bold"
+        android:layout_below="@+id/enternewpw"
+        android:layout_alignLeft="@+id/enternewpw"
+        android:layout_alignStart="@+id/enternewpw" />
+
+    <EditText
+        android:id="@+id/reenterpw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/confirmpwheader"
+        android:layout_alignStart="@+id/confirmpwheader"
+        android:layout_below="@+id/confirmpwheader"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="casual"
+        android:inputType="textPassword"
+        android:text="123456789123456789"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="italic" />
+
+    <CheckBox
+
+        android:id="@+id/cbShowPwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/submitbutton"
+        android:layout_marginTop="12dp"
+        android:checked="false"
+        android:fontFamily="casual"
+        android:text="Show/Hide password"
+        android:textStyle="bold|italic"
+        app:buttonTint="@color/endblue" />
+
+    <Button
+        android:id="@+id/submitbutton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/reenterpw"
+        android:layout_marginTop="13dp"
+        android:background="@color/endblue"
+        android:fontFamily="casual"
+        android:text="Submit"
+        android:textStyle="bold"
+        android:onClick="onClick"/>
+
+</RelativeLayout>

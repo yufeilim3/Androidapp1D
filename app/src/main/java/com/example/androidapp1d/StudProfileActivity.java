@@ -26,18 +26,9 @@ public class StudProfileActivity extends AppCompatActivity implements Navigation
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.studactivity_feed);
+        setContentView(R.layout.studactivity_profile);
 
         getSupportActionBar().setTitle("Your Profile");
-
-        ListView lv =(ListView)findViewById(R.id.profList);
-        ArrayList<String> profList = new ArrayList<String>();
-        profList.add("Oka Kurniawan");
-        profList.add("Valerene Goh");
-        profList.add("Cheryl Goh");
-        profList.add("Nigel Chan");
-        ArrayAdapter<String> lAdapter = new ArrayAdapter<String>(StudProfileActivity.this,android.R.layout.simple_list_item_1,profList);
-        lv.setAdapter(lAdapter);
 
         drawerLayout =(DrawerLayout)findViewById(R.id.drawerLayout);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.opendrawer, R.string.closedrawer);
