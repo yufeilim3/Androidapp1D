@@ -302,14 +302,14 @@
         android:id="@+id/staffID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/displayname"
+        android:layout_alignStart="@+id/displayname"
+        android:layout_below="@+id/displayname"
         android:ems="10"
         android:fontFamily="casual"
         android:inputType="textPersonName"
-        android:text="Staff ID"
-        android:textColor="@android:color/black"
-        android:layout_below="@+id/displayname"
-        android:layout_alignLeft="@+id/displayname"
-        android:layout_alignStart="@+id/displayname" />
+        android:text="Pandaaaaas"
+        android:textColor="@android:color/black" />
 
 
 </RelativeLayout>

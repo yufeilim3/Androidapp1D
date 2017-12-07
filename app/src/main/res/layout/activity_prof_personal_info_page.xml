@@ -1,9 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.androidapp1d.ProfPersonalInfoPage">
+    tools:context="com.example.androidapp1d.ProfPersonalInfoPage"
+    android:fitsSystemWindows="true">
 
-</android.support.constraint.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="454dp"
+        android:id="@+id/scrollView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="false"
+                android:src="@mipmap/pandaavatar" />
+
+            <TextView
+                android:id="@+id/Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="Panda-kun"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginTop="99dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/pillar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/Name"
+                android:layout_alignStart="@+id/Name"
+                android:layout_below="@+id/Name"
+                android:fontFamily="casual"
+                android:text="ISTD Pillar"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                app:cardBackgroundColor="@color/cardview_shadow_end_color"
+                app:cardCornerRadius="7dp"
+                android:id="@+id/cardView5"
+                android:layout_below="@+id/pillar"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <ImageView
+                    android:id="@+id/biblo"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@mipmap/bibloicon" />
+
+                <TextView
+                    android:id="@+id/Biblo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/cardView6"
+                    android:layout_marginLeft="53dp"
+                    android:layout_marginStart="53dp"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="casual"
+                    android:text="About Myself"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+            </android.support.v7.widget.CardView>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/contactdetails"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:cardBackgroundColor="@color/cardview_shadow_end_color"
+        app:cardCornerRadius="7dp"
+        android:layout_alignBottom="@+id/officehours"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/contact"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@mipmap/contactdetailsicon" />
+
+        <TextView
+            android:id="@+id/contacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/cardView6"
+            android:layout_marginLeft="53dp"
+            android:layout_marginStart="53dp"
+            android:layout_marginTop="13dp"
+            android:fontFamily="casual"
+            android:text="Contact Details"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:cardBackgroundColor="@color/cardview_shadow_end_color"
+        app:cardCornerRadius="7dp"
+        android:id="@+id/cardView6"
+        android:layout_above="@+id/editText2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="27dp">
+
+        <ImageView
+            android:id="@+id/moduleicon"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@mipmap/moduleicon" />
+
+        <TextView
+            android:id="@+id/ModulesList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="My Modules"
+            android:layout_marginLeft="53dp"
+            android:layout_marginStart="53dp"
+            android:layout_marginTop="13dp"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/listofMods"
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/contactdetails"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="casual"
+            android:text="10.009 History of Pandas \n50.002 Computation Structures of Pandas"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:textStyle="italic" />
+
+
+    </android.support.v7.widget.CardView>
+
+    <EditText
+        android:id="@+id/AboutMyself"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="I am a living proof that you can be fat just by eating salads! HAHAHA"
+        android:textColor="@android:color/black"
+        android:textSize="13sp"
+        android:textStyle="italic"
+        android:layout_above="@+id/cardView6"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignStart="@+id/editText2" />
+
+    <EditText
+        android:id="@+id/officehours"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:ems="10"
+        android:fontFamily="casual"
+        android:inputType="textPersonName"
+        android:text=" Wednesday 3pm - 5pm @ 1.502.27"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        android:layout_marginBottom="23dp"
+        android:layout_alignBottom="@+id/scrollView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="53dp"
+        android:layout_marginStart="53dp" />
+
+    <TextView
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:inputType="textPersonName"
+        android:text="Office Hours:"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_above="@+id/officehours"
+        android:layout_alignLeft="@+id/officehours"
+        android:layout_alignStart="@+id/officehours" />
+
+
+</RelativeLayout>
+
