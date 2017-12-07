@@ -1,22 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:weightSum="1">
 
-    <Button
+    <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/loginbutton"
-        android:text="student login"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/loginprof"
-        android:text="prof login"
+        android:layout_height="213dp"
+        app:srcCompat="@mipmap/sutd"
         />
 
+    <RadioGroup
+        android:id="@+id/studentorProf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/enterapp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="Enter"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="65dp" />
+
+    <RadioButton
+        android:id="@+id/student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:checked="true"
+        android:text="Student's Login"
+        app:buttonTint="@color/endblue"
+        android:layout_above="@+id/prof"
+        android:layout_alignLeft="@+id/imageView5"
+        android:layout_alignStart="@+id/imageView5" />
+
+    <RadioButton
+        android:id="@+id/prof"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:checked="false"
+        android:text="Professor's Login"
+        app:buttonTint="@color/endblue"
+        android:layout_above="@+id/enterapp"
+        android:layout_alignLeft="@+id/student"
+        android:layout_alignStart="@+id/student" />
+
+    <ImageView
+        android:id="@+id/usernameicon"
+        android:layout_width="31dp"
+        android:layout_height="37dp"
+        android:layout_gravity="left"
+        app:srcCompat="@mipmap/usernameicon"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="31dp"
+        android:layout_height="37dp"
+        app:srcCompat="@drawable/change_password"
+        android:layout_below="@+id/usernameicon"
+        android:layout_alignLeft="@+id/usernameicon"
+        android:layout_alignStart="@+id/usernameicon" />
+
+    <EditText
+        android:id="@+id/enterUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Username"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/usernameicon"
+        android:layout_toEndOf="@+id/usernameicon" />
+
+    <EditText
+        android:id="@+id/enterPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Password"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:layout_below="@+id/enterUsername"
+        android:layout_alignLeft="@+id/enterUsername"
+        android:layout_alignStart="@+id/enterUsername" />
+    />
 
 
-</LinearLayout>
+</RelativeLayout>
