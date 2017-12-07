@@ -18,16 +18,6 @@
             android:background="#dedede" /> !-->
 
 
-        <android.support.design.widget.NavigationView
-            android:id="@+id/nav_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:background="#FFFFFF"
-            app:menu="@menu/profnav_bar" />
-    </android.support.v4.widget.DrawerLayout>
-
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="454dp">
@@ -363,6 +353,15 @@
         </LinearLayout>
 
     </ScrollView>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#FFFFFF"
+            app:menu="@menu/profnav_bar" />
+    </android.support.v4.widget.DrawerLayout>
 
     <FrameLayout
         android:id="@+id/fragmentholder"

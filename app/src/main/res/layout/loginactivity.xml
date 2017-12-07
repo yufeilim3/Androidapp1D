@@ -23,37 +23,6 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom="65dp" />
 
-    <RadioGroup
-        android:id="@+id/studentorProf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-    <RadioButton
-        android:id="@+id/student"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:checked="false"
-        android:text="Student's Login"
-        app:buttonTint="@color/endblue"
-        android:layout_above="@+id/prof"
-        android:layout_alignLeft="@+id/imageView5"
-        android:layout_alignStart="@+id/imageView5" />
-
-    <RadioButton
-        android:id="@+id/prof"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/enterapp"
-        android:layout_alignLeft="@+id/student"
-        android:layout_alignStart="@+id/student"
-        android:layout_weight="1"
-        android:checked="false"
-        android:text="Professor's Login"
-        app:buttonTint="@color/endblue" />
-
-    </RadioGroup>
-
     <ImageView
         android:id="@+id/usernameicon"
         android:layout_width="31dp"
@@ -103,7 +72,38 @@
         android:layout_alignLeft="@+id/enterUsername"
         android:layout_alignStart="@+id/enterUsername"
         android:inputType="textPassword"/>
-    />
+
+    <RadioGroup
+        android:id="@+id/studentorProf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    <RadioButton
+        android:id="@+id/student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/enterPassword"
+        android:layout_marginTop="345dp"
+        android:layout_marginLeft="12dp"
+        android:layout_weight="1"
+        android:checked="false"
+        android:text="Student's Login"
+        app:buttonTint="@color/endblue" />
+
+    <RadioButton
+        android:id="@+id/prof"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/student"
+        android:layout_weight="1"
+        android:checked="false"
+        android:layout_marginLeft="12dp"
+        android:text="Professor's Login"
+        app:buttonTint="@color/endblue" />
+    </RadioGroup>
 
 
 </RelativeLayout>
