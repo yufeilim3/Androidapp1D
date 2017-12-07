@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:fitsSystemWindows="true">
 
     <android.support.v4.widget.DrawerLayout
@@ -11,9 +12,8 @@
         android:layout_height="match_parent"
         android:id="@+id/drawerLayout"
         android:orientation="vertical">
-
         <TabHost
-            android:id="@+id/bookingsTab"
+            android:id="@+id/newbookingsTab"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <LinearLayout
@@ -29,25 +29,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                     <include
-                        android:id="@+id/Upcoming"
-                        layout="@layout/stud_bookingupcoming"
+                        android:id="@+id/Professors"
+                        layout="@layout/stud_bookingprofs"
                         android:layout_height="match_parent"
                         android:layout_width="match_parent"></include>
                     <include
-                        android:id="@+id/Previous"
-                        layout="@layout/stud_bookingprevious"
-                        android:layout_height="match_parent"
-                        android:layout_width="match_parent"></include>
-                    <include
-                        android:id="@+id/Favourites"
-                        layout="@layout/stud_bookingfavourites"
+                        android:id="@+id/Modules"
+                        layout="@layout/stud_bookingmods"
                         android:layout_height="match_parent"
                         android:layout_width="match_parent"></include>
 
                 </FrameLayout>
             </LinearLayout>
         </TabHost>
-
         <android.support.design.widget.NavigationView
             android:id="@+id/nav_view"
             android:layout_width="match_parent"
@@ -60,10 +54,7 @@
     <FrameLayout
         android:id="@+id/fragmentholder"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_height="match_parent">
 
         <android.support.design.widget.BottomNavigationView
             android:id="@+id/bottomNavView_Bar"
