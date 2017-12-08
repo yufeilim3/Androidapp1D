@@ -20,7 +20,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="454dp">
+        android:layout_height="match_parent"
+        android:paddingBottom="60dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -85,21 +86,24 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="DETAILS"
-                            android:textSize="14dp" />
+                            android:textSize="14dp"
+                            android:onClick="card01ViewDetails"/>
 
                         <Button
                             android:id="@+id/card01accept"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="ACCEPT"
-                            android:textSize="14dp" />
+                            android:textSize="14dp"
+                            android:onClick="accept" />
 
                         <Button
                             android:id="@+id/card01reject"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="REJECT"
-                            android:textSize="14dp" />
+                            android:textSize="14dp"
+                            android:onClick="reject" />
 
                     </LinearLayout>
 
@@ -144,7 +148,7 @@
                         android:layout_below="@+id/card02image"
                         android:maxLines="1"
                         android:padding="4dp"
-                        android:text="  50.002 consultation starting soon"
+                        android:text="  50.001 consultation starting soon"
                         android:textColor="#222"
                         android:textStyle="bold"
                         android:textSize="22dp" />
@@ -176,7 +180,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="DETAILS"
-                            android:textSize="14dp" />
+                            android:textSize="14dp"
+                            android:onClick="card02ViewDetails"/>
 
                     </LinearLayout>
 
@@ -354,13 +359,13 @@
 
     </ScrollView>
 
-        <android.support.design.widget.NavigationView
-            android:id="@+id/nav_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:background="#FFFFFF"
-            app:menu="@menu/profnav_bar" />
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FFFFFF"
+        app:menu="@menu/profnav_bar" />
     </android.support.v4.widget.DrawerLayout>
 
     <FrameLayout

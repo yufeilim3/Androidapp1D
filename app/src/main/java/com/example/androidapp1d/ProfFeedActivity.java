@@ -1,17 +1,21 @@
 package com.example.androidapp1d;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -103,6 +107,73 @@ public class ProfFeedActivity extends AppCompatActivity implements NavigationVie
             }
         });
 
+        if (LoginActivity.accept1) {
+            ((Button) findViewById(R.id.card01accept)).setText("ACCEPTED");
+            //((Button) findViewById(R.id.card01accept)).setTextColor(Color.GREEN);
+            ((Button) findViewById(R.id.card01accept)).setTextColor(Color.parseColor("#007D00"));
+            ((Button) findViewById(R.id.card01accept)).setClickable(false);
+            ((Button) findViewById(R.id.card01accept)).setBackgroundColor(View.INVISIBLE);
+            ((Button) findViewById(R.id.card01reject)).setVisibility(View.INVISIBLE);
+        }
+        if (LoginActivity.reject1) {
+            ((Button) findViewById(R.id.card01accept)).setText("REJECTED");
+            ((Button) findViewById(R.id.card01accept)).setTextColor(Color.RED);
+            //((Button) findViewById(R.id.card01accept)).setTextColor(Color.parseColor("#007D00"));
+            ((Button) findViewById(R.id.card01accept)).setClickable(false);
+            ((Button) findViewById(R.id.card01accept)).setBackgroundColor(View.INVISIBLE);
+
+            ((Button) findViewById(R.id.card01reject)).setVisibility(View.INVISIBLE);
+        }
+
+    }
+
+    public void card01ViewDetails (View v) {
+        // 1. Instantiate an AlertDialog.Builder with its constructor
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+       // 2. Chain together various setter methods to set the dialog characteristics
+        builder.setMessage("Topics covered: MOJO" + "\n" + "Venue: Digital Systems Lab" + "\n" + "Number of attendees: 1 pax (max 5)" + "\n" + "Questions: How do I connect external IO devices to MOJO?")
+                .setTitle("DETAILS");
+
+        // 3. Get the AlertDialog from create()
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+    }
+
+    public void card02ViewDetails (View v) {
+        // 1. Instantiate an AlertDialog.Builder with its constructor
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        // 2. Chain together various setter methods to set the dialog characteristics
+        builder.setMessage("Topics covered: Design Patterns" + "\n" + "Venue: Cohort Classroom 10 (Building 1 Level 4)" + "\n" + "Number of attendees: Everyone is welcome")
+                .setTitle("DETAILS");
+
+        // 3. Get the AlertDialog from create()
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+    }
+
+    public void accept (View v) {
+        ((Button) findViewById(R.id.card01accept)).setText("ACCEPTED");
+        //((Button) findViewById(R.id.card01accept)).setTextColor(Color.GREEN);
+        ((Button) findViewById(R.id.card01accept)).setTextColor(Color.parseColor("#007D00"));
+        ((Button) findViewById(R.id.card01accept)).setClickable(false);
+        ((Button) findViewById(R.id.card01accept)).setBackgroundColor(View.INVISIBLE);
+        ((Button) findViewById(R.id.card01reject)).setVisibility(View.INVISIBLE);
+        LoginActivity.accept1=true;
+    }
+
+    public void reject (View v) {
+        ((Button) findViewById(R.id.card01accept)).setText("REJECTED");
+        ((Button) findViewById(R.id.card01accept)).setTextColor(Color.RED);
+        //((Button) findViewById(R.id.card01accept)).setTextColor(Color.parseColor("#007D00"));
+        ((Button) findViewById(R.id.card01accept)).setClickable(false);
+        ((Button) findViewById(R.id.card01accept)).setBackgroundColor(View.INVISIBLE);
+
+        ((Button) findViewById(R.id.card01reject)).setVisibility(View.INVISIBLE);
+        LoginActivity.reject1=true;
     }
 
     @Override
