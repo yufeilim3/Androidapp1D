@@ -17,13 +17,13 @@
         android:id="@+id/enterapp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
+
         android:onClick="onClick"
         android:text="Enter"
         android:layout_below="@+id/studentorProf"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-=======
+
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -34,7 +34,6 @@
         android:text="Enter"
         android:textColor="@android:color/white"
         android:textSize="24sp" />
->>>>>>> origin/tracyfeed
 
     <ImageView
         android:id="@+id/usernameicon"
