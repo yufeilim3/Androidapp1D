@@ -16,6 +16,8 @@ public class LoginActivity extends AppCompatActivity {
     private RadioButton student;
     private RadioButton prof;
     private Button enter;
+    static boolean accept1 = false;
+    static boolean reject1 = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -8,7 +8,8 @@
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
-        android:layout_height="213dp"
+        android:layout_height="218dp"
+        android:layout_alignParentTop="true"
         app:srcCompat="@mipmap/sutd"
         />
 
@@ -16,12 +17,16 @@
         android:id="@+id/enterapp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="Enter"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="65dp" />
+        android:layout_marginBottom="0dp"
+        android:background="@color/blueeeee"
+        android:fontFamily="casual"
+        android:onClick="onClick"
+        android:text="Enter"
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
 
     <ImageView
         android:id="@+id/usernameicon"
