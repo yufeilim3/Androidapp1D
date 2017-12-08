@@ -1,4 +1,4 @@
-package com.example.androidapp1d;
+package com.example.androidapp1d.Prof;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,6 +16,8 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import com.example.androidapp1d.R;
 
 public class ProfChangePWpage extends AppCompatActivity {
 

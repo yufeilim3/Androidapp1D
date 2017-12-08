@@ -8,11 +8,8 @@
     <color name="colorAccent2">#FF4081</color>
     <color name="colorAccent">#FFFFFF</color>
     <color name="grey">#A9A9A9</color>
-<<<<<<< HEAD
     <color name="blueeeee">#6c7cd4</color>
-=======
     <color name="emptySlot">#39F38C</color>
     <color name="halfEmptySlot">#F1F339</color>
     <color name="fullSlot">#F34839</color>
->>>>>>> origin/Val
 </resources>

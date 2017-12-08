@@ -12,6 +12,7 @@ import android.widget.RadioGroup;
 
 import com.example.androidapp1d.Prof.ProfFeedActivity;
 import com.example.androidapp1d.Stud.Booking.StudProfDetails;
+import com.example.androidapp1d.Stud.Feed.StudFeedActivity;
 
 public class LoginActivity extends AppCompatActivity {
     //private Button loginbutton;
@@ -19,8 +20,8 @@ public class LoginActivity extends AppCompatActivity {
     private RadioButton student;
     private RadioButton prof;
     private Button enter;
-    static boolean accept1 = false;
-    static boolean reject1 = false;
+    public static boolean accept1 = false;
+    public static boolean reject1 = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +34,6 @@ public class LoginActivity extends AppCompatActivity {
         enter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-<<<<<<< HEAD
                 if (student.isChecked()) {
                     Intent intent = new Intent(LoginActivity.this, StudFeedActivity.class);
                     startActivity(intent);
@@ -41,15 +41,11 @@ public class LoginActivity extends AppCompatActivity {
                     Intent intent = new Intent(LoginActivity.this, ProfFeedActivity.class);
                     startActivity(intent);
                 }
-=======
-                Intent studentActivity = new Intent(LoginActivity.this, StudProfDetails.class);
-                startActivity(studentActivity);
-            }
-        });
->>>>>>> origin/Val
-
+                //Intent studentActivity = new Intent(LoginActivity.this, StudProfDetails.class);
+                //startActivity(studentActivity);
             }
         });
 
-    }
+            }
+
 }

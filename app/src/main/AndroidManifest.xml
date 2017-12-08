@@ -32,18 +32,17 @@
         <activity android:name=".Stud.StudSearchActivity"
             android:windowSoftInputMode="adjustPan"/>
 
-<<<<<<< HEAD
         <activity android:name=".ProfBookingActivity" />
         <activity android:name=".ProfNotificationActivity" />
         <activity android:name=".ProfProfileActivity" />
         <activity android:name=".ProfSearchActivity" />
-        <activity android:name=".ProfPersonalInfoPage" />
-        <activity android:name=".ProfReportStudentsPage" />
-        <activity android:name=".ProfBookingsPage" />
-        <activity android:name=".ProfChangePWpage" />
-        <activity android:name=".ProfModulesList" />
-        <activity android:name=".ProfPriorityListPage"></activity>
-=======
+        <activity android:name=".Prof.ProfPersonalInfoPage" />
+        <activity android:name=".Prof.ProfReportStudentsPage" />
+        <activity android:name=".Prof.ProfBookingsPage" />
+        <activity android:name=".Prof.ProfChangePWpage" />
+        <activity android:name=".Prof.ProfModulesList" />
+        <activity android:name=".Prof.ProfPriorityListPage"></activity>
+
         <activity android:name=".Stud.Booking.StudBookingProf"></activity>
         <activity android:name=".Stud.Booking.StudBookingMod"></activity>
         <activity android:name=".Stud.Booking.StudBookingUpcoming"></activity>
@@ -57,7 +56,7 @@
         <activity android:name=".Prof.ProfProfileActivity" />
         <activity android:name=".Prof.ProfSearchActivity"></activity>
 
->>>>>>> origin/Val
+
     </application>
 
 </manifest>

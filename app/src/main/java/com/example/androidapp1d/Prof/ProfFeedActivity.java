@@ -13,15 +13,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-<<<<<<< HEAD:app/src/main/java/com/example/androidapp1d/ProfFeedActivity.java
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-=======
->>>>>>> origin/Val:app/src/main/java/com/example/androidapp1d/Prof/ProfFeedActivity.java
 import android.widget.TextView;
 
+import com.example.androidapp1d.LoginActivity;
 import com.example.androidapp1d.R;
 
 public class ProfFeedActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
