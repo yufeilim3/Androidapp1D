@@ -17,23 +17,15 @@
         android:id="@+id/enterapp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:onClick="onClick"
         android:text="Enter"
-        android:layout_below="@+id/studentorProf"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="0dp"
         android:background="@color/blueeeee"
         android:fontFamily="casual"
-        android:onClick="onClick"
-        android:text="Enter"
         android:textColor="@android:color/white"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ImageView
         android:id="@+id/usernameicon"

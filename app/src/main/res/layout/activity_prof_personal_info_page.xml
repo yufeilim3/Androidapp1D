@@ -212,21 +212,6 @@
                             android:layout_marginLeft="53dp"
                             android:layout_marginTop="35dp"/>
 
-                        <EditText
-                            android:id="@+id/officehours"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:fontFamily="casual"
-                            android:inputType="textPersonName"
-                            android:text=" Wednesday 3pm - 5pm @ 1.502.27"
-                            android:textSize="12sp"
-                            android:textStyle="italic"
-                            android:layout_marginBottom="23dp"
-                            android:layout_marginLeft="50dp"
-                            android:layout_marginTop="45dp"
-                            />
-
                         <TextView
                             android:id="@+id/email"
                             android:layout_width="wrap_content"
@@ -238,7 +223,7 @@
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:layout_marginLeft="53dp"
-                            android:layout_marginTop="82dp"
+                            android:layout_marginTop="105dp"
                             />
 
                         <EditText
@@ -251,11 +236,28 @@
                             android:textStyle="italic"
                             android:text="panda_kun@mymail.sutd.edu.sg"
                             android:textSize="12sp"
-                            android:layout_marginTop="90dp"
+                            android:layout_marginTop="110dp"
                             android:layout_marginLeft="53dp"
                          />
 
+                        <TextClock
+                            android:id="@+id/textClock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:format12Hour="3:00aa to 5:00aa"
+                            android:layout_below="@+id/day"
+                            android:layout_alignStart="@+id/day" />
 
+                        <EditText
+                            android:id="@+id/day"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Wednesday @ 1.502.27"
+                            android:fontFamily="casual"
+                            android:textSize="13dp"
+
+                            android:layout_below="@+id/contact"
+                            android:layout_alignStart="@+id/editText2" />
                     </RelativeLayout>
                 </android.support.v7.widget.CardView>
 
