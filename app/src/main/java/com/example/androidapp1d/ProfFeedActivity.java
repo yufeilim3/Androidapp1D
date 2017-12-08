@@ -132,7 +132,7 @@ public class ProfFeedActivity extends AppCompatActivity implements NavigationVie
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
        // 2. Chain together various setter methods to set the dialog characteristics
-        builder.setMessage("Topics covered: MOJO" + "\n" + "Venue: Digital Systems Lab" + "\n" + "Number of attendees: 1 pax (max 5)" + "\n" + "Questions: How do I connect external IO devices to MOJO?")
+        builder.setMessage("Topics covered: MOJO" + "\n" + "Venue: Digital Systems Lab" + "\n" + "Number of attendees: 1 pax (max 5)" + "\n" + "Members: Tracy Yee En Ying" + "\n" + "Questions: How do I connect external IO devices to MOJO?")
                 .setTitle("DETAILS");
 
         // 3. Get the AlertDialog from create()
@@ -146,7 +146,7 @@ public class ProfFeedActivity extends AppCompatActivity implements NavigationVie
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         // 2. Chain together various setter methods to set the dialog characteristics
-        builder.setMessage("Topics covered: Design Patterns" + "\n" + "Venue: Cohort Classroom 10 (Building 1 Level 4)" + "\n" + "Number of attendees: Everyone is welcome")
+        builder.setMessage("Topics covered: Design Patterns" + "\n" + "Venue: Cohort Classroom 10 (Building 1 Level 4)" + "\n" + "Number of attendees: Everyone is welcome" +"\n" + "Members: Cohort 1 students")
                 .setTitle("DETAILS");
 
         // 3. Get the AlertDialog from create()
