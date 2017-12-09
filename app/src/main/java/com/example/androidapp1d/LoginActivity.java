@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import java.util.ArrayList;
+
 public class LoginActivity extends AppCompatActivity {
     //private Button loginbutton;
     //private Button tempbutton;
@@ -18,6 +20,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button enter;
     static boolean accept1 = false;
     static boolean reject1 = false;
+    static ArrayList<String> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+        list = new ArrayList<String>();
 
     }
 }
