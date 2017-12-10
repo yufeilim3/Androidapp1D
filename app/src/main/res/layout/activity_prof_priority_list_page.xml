@@ -1,9 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     tools:context="com.example.androidapp1d.Prof.ProfPriorityListPage">
+=======
+    tools:context="com.example.androidapp1d.ProfPriorityListPage"
+    android:orientation="vertical">
+>>>>>>> origin/tracyfeed
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/slotpriority"
+        android:layout_width="288dp"
+        android:layout_height="22dp"
+        android:fontFamily="casual"
+        android:text="Slot Priority:"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:checked="false"
+            android:text="First come first served"
+            app:buttonTint="@color/endblue" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:checked="false"
+            android:text="Topic of the week"
+            app:buttonTint="@color/endblue" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:checked="false"
+            android:text="Project enquiries"
+            app:buttonTint="@color/endblue" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:checked="false"
+            android:text="Topic for upcoming test"
+            app:buttonTint="@color/endblue" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/rejectstudents"
+        android:layout_width="288dp"
+        android:layout_height="22dp"
+        android:fontFamily="casual"
+        android:text="Automatically reject students when:"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="5dp"
+        android:text="Student books more than 3 slots in the same week"
+        app:buttonTint="@color/endblue"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text="Attendance less than 5"
+        app:buttonTint="@color/endblue"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text="Slot does not meet slot priority"
+        app:buttonTint="@color/endblue"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:fontFamily="casual"
+            android:text="Default Location:"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="17dp" />
+
+        <EditText
+            android:layout_width="230dp"
+            android:layout_height="43dp"
+            android:fontFamily="casual"
+            android:hint="Enter a location"
+            android:inputType="text"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="13dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:fontFamily="casual"
+            android:text="Max capacity:    "
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:layout_width="230dp"
+            android:layout_height="43dp"
+            android:fontFamily="casual"
+            android:hint="Enter a number"
+            android:inputType="number"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="6dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

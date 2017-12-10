@@ -10,9 +10,13 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+<<<<<<< HEAD
 import com.example.androidapp1d.Prof.ProfFeedActivity;
 import com.example.androidapp1d.Stud.Booking.StudProfDetails;
 import com.example.androidapp1d.Stud.Feed.StudFeedActivity;
+=======
+import java.util.ArrayList;
+>>>>>>> origin/tracyfeed
 
 public class LoginActivity extends AppCompatActivity {
     //private Button loginbutton;
@@ -20,8 +24,14 @@ public class LoginActivity extends AppCompatActivity {
     private RadioButton student;
     private RadioButton prof;
     private Button enter;
+<<<<<<< HEAD
     public static boolean accept1 = false;
     public static boolean reject1 = false;
+=======
+    static boolean accept1 = false;
+    static boolean reject1 = false;
+    static ArrayList<String> list;
+>>>>>>> origin/tracyfeed
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +55,7 @@ public class LoginActivity extends AppCompatActivity {
                 //startActivity(studentActivity);
             }
         });
+        list = new ArrayList<String>();
 
             }
 
