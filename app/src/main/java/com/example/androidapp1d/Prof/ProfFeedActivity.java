@@ -133,7 +133,7 @@ public class ProfFeedActivity extends AppCompatActivity implements NavigationVie
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
        // 2. Chain together various setter methods to set the dialog characteristics
-        builder.setMessage("Topics covered: MOJO" + "\n" + "Venue: Digital Systems Lab" + "\n" + "Number of attendees: 1 pax (max 5)" + "\n" + "Members: Tracy Yee En Ying" + "\n" + "Questions: How do I connect external IO devices to MOJO?")
+        builder.setMessage("Topics covered: MOJO" + "\n" + "Venue: Digital Systems Lab" + "\n" + "Number of attendees: 1 pax (max 5)" + "\n" + "Initiator: Student Tracy Yee Enying" + "\n" + "Questions: How do I connect external IO devices to MOJO?")
                 .setTitle("DETAILS");
 
         // 3. Get the AlertDialog from create()
@@ -147,7 +147,35 @@ public class ProfFeedActivity extends AppCompatActivity implements NavigationVie
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         // 2. Chain together various setter methods to set the dialog characteristics
-        builder.setMessage("Topics covered: Design Patterns" + "\n" + "Venue: Cohort Classroom 10 (Building 1 Level 4)" + "\n" + "Number of attendees: Everyone is welcome" +"\n" + "Members: Cohort 1 students")
+        builder.setMessage("Topics covered: Design Patterns" + "\n" + "Venue: Cohort Classroom 10 (Building 1 Level 4)" + "\n" + "Initiator: Prof Man" + "\n" + "Number of attendees: Everyone is welcome")
+                .setTitle("DETAILS");
+
+        // 3. Get the AlertDialog from create()
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+    }
+
+    public void card03ViewDetails (View v) {
+        // 1. Instantiate an AlertDialog.Builder with its constructor
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        // 2. Chain together various setter methods to set the dialog characteristics
+        builder.setMessage("Student Tracy Yee Enying replied to the following line in ANNNOUNCEMENTS:" + "\n" + "2D Demo will be held this Friday." + "\n" + "Comment: For the SAT solver test, are there any more conclusive test cases provided as the current SAT test cases do not cover all the possibilities?")
+                .setTitle("DETAILS");
+
+        // 3. Get the AlertDialog from create()
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+    }
+
+    public void card04ViewDetails (View v) {
+        // 1. Instantiate an AlertDialog.Builder with its constructor
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        // 2. Chain together various setter methods to set the dialog characteristics
+        builder.setMessage("Student Tracy Yee Enying cancelled the following consultation:" + "\n" + "08/12/17, Friday, 3:00pm" + "\n" + "Reason: Sorry Prof, I'm not feeling well today as I am down with fever and flu. I will book a makeup slot next week when I am better. Thanks for the understanding.")
                 .setTitle("DETAILS");
 
         // 3. Get the AlertDialog from create()
