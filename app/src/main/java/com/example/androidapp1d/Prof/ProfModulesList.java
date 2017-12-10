@@ -23,7 +23,7 @@ public class ProfModulesList extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("My Modules");
 
-        ProfModulesListAdapter modadapter = new ProfModulesListAdapter(LoginActivity.list,this);
+        ProfModulesListAdapter modadapter = new ProfModulesListAdapter(LoginActivity.list2,this);
 //handle listview and assign adapter
         ListView lView = (ListView)findViewById(R.id.listofmodules);
         lView.setAdapter(modadapter);
@@ -41,9 +41,9 @@ public class ProfModulesList extends AppCompatActivity {
                     toast.show();
                 }
                 else {
-                    LoginActivity.list.add(((EditText) findViewById(R.id.inputmodulestaught)).getText().toString());
+                    LoginActivity.list2.add(((EditText) findViewById(R.id.inputmodulestaught)).getText().toString());
                     //instantiate custom adapter
-                    ProfReportStudentsAdapter adapter = new ProfReportStudentsAdapter(LoginActivity.list, ProfModulesList.this);
+                    ProfModulesListAdapter adapter = new ProfModulesListAdapter(LoginActivity.list2, ProfModulesList.this);
 
                     //handle listview and assign adapter
                     ListView lView = (ListView) findViewById(R.id.listofmodules);

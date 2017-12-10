@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     public static boolean accept1 = false;
     public static boolean reject1 = false;
     public static ArrayList<String> list;
-
+    public static ArrayList<String> list2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +42,8 @@ public class LoginActivity extends AppCompatActivity {
         register = (Button) findViewById(R.id.signupbtn);
         student = (RadioButton) findViewById(R.id.student);
         prof = (RadioButton) findViewById(R.id.prof);
+        list = new ArrayList<String>();
+        list2 = new ArrayList<String>();
     }
         //register.setOnClickListener(this);
         //enter.setOnClickListener(new View.OnClickListener() {
@@ -82,7 +84,5 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(studentActivity);
         }
 
-
-        //list = new ArrayList<String>();
 }
 
