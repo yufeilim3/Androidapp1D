@@ -1,4 +1,4 @@
-package com.example.androidapp1d;
+package com.example.androidapp1d.Prof;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,6 +11,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.TextView;
+
+import com.example.androidapp1d.R;
 
 import java.util.ArrayList;
 

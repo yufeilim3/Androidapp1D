@@ -5,16 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-
 import com.example.androidapp1d.LoginActivity;
-import com.example.androidapp1d.ProfReportStudentsAdapter;
 import com.example.androidapp1d.R;
 
 public class ProfReportStudentsPage extends AppCompatActivity {
@@ -40,7 +36,7 @@ public class ProfReportStudentsPage extends AppCompatActivity {
         ProfReportStudentsAdapter adapter = new ProfReportStudentsAdapter(LoginActivity.list, this);
 
         //handle listview and assign adapter
-        ListView lView = (ListView)findViewById(R.id.modulesList);
+        ListView lView = (ListView)findViewById(R.id.reportstudentlist);
         lView.setAdapter(adapter);
 
         ((ImageButton) findViewById(R.id.add_button)).setOnClickListener(new View.OnClickListener() {
@@ -61,7 +57,7 @@ public class ProfReportStudentsPage extends AppCompatActivity {
                     ProfReportStudentsAdapter adapter = new ProfReportStudentsAdapter(LoginActivity.list, ProfReportStudentsPage.this);
 
                     //handle listview and assign adapter
-                    ListView lView = (ListView) findViewById(R.id.modulesList);
+                    ListView lView = (ListView) findViewById(R.id.reportstudentlist);
                     lView.setAdapter(adapter);
                 }
             }

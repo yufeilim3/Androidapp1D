@@ -1,9 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.androidapp1d.Prof.ProfModulesList">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/moduleheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="My Modules"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="95dp"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/textView5"
+        />
+
+    <ImageButton
+        android:id="@+id/add_button"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:layout_toRightOf="@id/moduleheader"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/ic_add_black_24dp" />
+
+    <EditText
+        android:id="@+id/inputmodulestaught"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/add_button"
+        android:paddingTop="25dp"/>
+
+    <ListView
+        android:id="@+id/listofmodules"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/moduleheader" />
+
+</RelativeLayout>
