@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import com.example.androidapp1d.LoginActivity;
+import com.example.androidapp1d.ProfReportStudentsAdapter;
 import com.example.androidapp1d.R;
 
 public class ProfReportStudentsPage extends AppCompatActivity {
