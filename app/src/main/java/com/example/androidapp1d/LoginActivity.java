@@ -28,6 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     private RadioButton student;
     private RadioButton prof;
     private Button enter;
+    private Button register;
     public static boolean accept1 = false;
     public static boolean reject1 = false;
     public static ArrayList<String> list;
@@ -38,10 +39,13 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.loginactivity);
         //loginbutton = (Button) findViewById(R.id.loginbutton);
         enter = (Button) findViewById(R.id.enterapp);
+        register = (Button) findViewById(R.id.signupbtn);
         student = (RadioButton) findViewById(R.id.student);
         prof = (RadioButton) findViewById(R.id.prof);
-        enter.setOnClickListener(new View.OnClickListener() {
-            @Override
+    }
+        //register.setOnClickListener(this);
+        //enter.setOnClickListener(new View.OnClickListener() {
+           /* @Override
             public void onClick(View v) {
 
                 if (student.isChecked()) {
@@ -58,9 +62,27 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(studentActivity);
 
             }
-        });
-        list = new ArrayList<String>();
+        });*/
+           public void buttonOnClick(View view){
+        if (student.isChecked()) {
+            Intent intent = new Intent(LoginActivity.this, StudFeedActivity.class);
+            startActivity(intent);
+        } else if (prof.isChecked()) {
+            Intent intent = new Intent(LoginActivity.this, ProfFeedActivity.class);
+            startActivity(intent);
+        }
 
-            }
+    }
+        public void buttonOnClick2(View view){
 
+        //Intent studentActivity = new Intent(LoginActivity.this, StudProfDetails.class);
+        //startActivity(studentActivity);
+
+        Intent studentActivity = new Intent(LoginActivity.this, StudRegistration.class);
+        startActivity(studentActivity);
+        }
+
+
+        //list = new ArrayList<String>();
 }
+
