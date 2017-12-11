@@ -18,7 +18,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.androidapp1d.Prof.ProfFeedActivity;
-<<<<<<< HEAD
+
 
 import com.example.androidapp1d.Stud.Booking.StudProfDetails;
 import com.example.androidapp1d.Stud.Feed.StudFeedActivity;
@@ -26,7 +26,7 @@ import com.example.androidapp1d.Stud.Feed.StudFeedActivity;
 import java.util.ArrayList;
 
 
-import com.example.androidapp1d.Stud.Booking.StudRegistration;
+import com.example.androidapp1d.Stud.Profile.StudRegistration;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -36,9 +36,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import static android.widget.Toast.LENGTH_LONG;
 
-=======
+
 import com.example.androidapp1d.Stud.Booking.StudBookingActivity;
->>>>>>> origin/Val
 
 public class LoginActivity extends AppCompatActivity {
     //private Button loginbutton;
@@ -84,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
         //enter.setOnClickListener(new View.OnClickListener() {
            /* @Override
             public void onClick(View v) {
-<<<<<<< HEAD
+
 
                 if (student.isChecked()) {
                     Intent intent = new Intent(LoginActivity.this, StudFeedActivity.class);
@@ -97,9 +96,9 @@ public class LoginActivity extends AppCompatActivity {
                 //startActivity(studentActivity);
 
                 Intent studentActivity = new Intent(LoginActivity.this, StudRegistration.class);
-=======
+
                 Intent studentActivity = new Intent(LoginActivity.this, StudBookingActivity.class);
->>>>>>> origin/Val
+
                 startActivity(studentActivity);
 
             }

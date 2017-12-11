@@ -7,7 +7,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.androidapp1d.Prof.ProfRegistration;
-import com.example.androidapp1d.Stud.Booking.StudRegistration;
+import com.example.androidapp1d.Stud.Booking.*;
+import com.example.androidapp1d.Stud.Profile.StudRegistration;
 
 public class selectProfOrStudentForReg extends AppCompatActivity {
     private Button amAStudent;
