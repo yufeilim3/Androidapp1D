@@ -129,34 +129,27 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <RadioGroup
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content" >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="43dp"
-            android:fontFamily="casual"
-            android:text="Max capacity:    "
-            android:textColor="@android:color/black"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="10dp" />
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:checked="false"
+            android:text="Upgrade location if room capacity is exceed"
+            app:buttonTint="@color/endblue" />
 
-        <EditText
-            android:layout_width="230dp"
-            android:layout_height="43dp"
-            android:fontFamily="casual"
-            android:hint="Enter a number"
-            android:inputType="number"
-            android:textColor="@android:color/black"
-            android:textSize="12sp"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="6dp"/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:checked="false"
+            android:text="Reject automatically if room capacity is exceeded"
+            app:buttonTint="@color/endblue" />
 
-    </LinearLayout>
+    </RadioGroup>
 
 
 </LinearLayout>

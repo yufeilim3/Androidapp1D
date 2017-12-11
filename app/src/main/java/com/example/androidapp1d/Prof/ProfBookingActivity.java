@@ -11,8 +11,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 import com.example.androidapp1d.R;
+
+import java.util.ArrayList;
 
 public class ProfBookingActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawerLayout;
@@ -23,7 +26,7 @@ public class ProfBookingActivity extends AppCompatActivity implements Navigation
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profactivity_booking);
-        getSupportActionBar().setTitle("Your Bookings");
+        getSupportActionBar().setTitle("Your Booked Slots");
         drawerLayout =(DrawerLayout)findViewById(R.id.drawerLayout);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.opendrawer, R.string.closedrawer);
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
@@ -37,6 +40,40 @@ public class ProfBookingActivity extends AppCompatActivity implements Navigation
         final Menu menu1 =navigationView.getMenu();
         MenuItem dBooking = menu1.getItem(1);
         dBooking.setChecked(true);
+
+        //generate list
+        ArrayList<String> card01 = new ArrayList<String>();
+        card01.add("50.001 Consultation Slot");
+        card01.add("Student Tracy Yee");
+        card01.add("Cohort Classroom 13");
+        card01.add("11 December");
+        card01.add("Need help for 1D Information Systems Project");
+
+        ArrayList<String> card02 = new ArrayList<String>();
+        card02.add("50.002 Consultation Slot");
+        card02.add("Student Tracy Yee");
+        card02.add("Cohort Classroom 14");
+        card02.add("12 December");
+        card02.add("Revision for Quiz 3");
+
+        ArrayList<String> card03 = new ArrayList<String>();
+        card03.add("50.004 Consultation Slot");
+        card03.add("Student Tracy Yee");
+        card03.add("Cohort Classroom 14");
+        card03.add("12 December");
+        card03.add("Revision for Quiz 3");
+
+        ArrayList<ArrayList<String>> list = new ArrayList<ArrayList<String>>();
+        list.add(card01);
+        list.add(card02);
+        list.add(card03);
+
+        //instantiate custom adapter
+        ProfBookingsAdapter adapter = new ProfBookingsAdapter(list, this);
+
+        //handle listview and assign adapter
+        ListView lView = (ListView)findViewById(R.id.profList);
+        lView.setAdapter(adapter);
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override

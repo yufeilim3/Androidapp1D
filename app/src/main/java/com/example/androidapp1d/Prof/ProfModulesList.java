@@ -34,7 +34,7 @@ public class ProfModulesList extends AppCompatActivity {
 
                 if (((EditText)findViewById(R.id.inputmodulestaught)).getText().toString().matches("")) {
                     Context context = getApplicationContext();
-                    CharSequence text = "Please enter a name";
+                    CharSequence text = "Please enter a module";
                     int duration = Toast.LENGTH_SHORT;
 
                     Toast toast = Toast.makeText(context, text, duration);
