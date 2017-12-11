@@ -18,6 +18,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.androidapp1d.Prof.ProfFeedActivity;
+<<<<<<< HEAD
 
 import com.example.androidapp1d.Stud.Booking.StudProfDetails;
 import com.example.androidapp1d.Stud.Feed.StudFeedActivity;
@@ -35,6 +36,9 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import static android.widget.Toast.LENGTH_LONG;
 
+=======
+import com.example.androidapp1d.Stud.Booking.StudBookingActivity;
+>>>>>>> origin/Val
 
 public class LoginActivity extends AppCompatActivity {
     //private Button loginbutton;
@@ -80,6 +84,7 @@ public class LoginActivity extends AppCompatActivity {
         //enter.setOnClickListener(new View.OnClickListener() {
            /* @Override
             public void onClick(View v) {
+<<<<<<< HEAD
 
                 if (student.isChecked()) {
                     Intent intent = new Intent(LoginActivity.this, StudFeedActivity.class);
@@ -92,6 +97,9 @@ public class LoginActivity extends AppCompatActivity {
                 //startActivity(studentActivity);
 
                 Intent studentActivity = new Intent(LoginActivity.this, StudRegistration.class);
+=======
+                Intent studentActivity = new Intent(LoginActivity.this, StudBookingActivity.class);
+>>>>>>> origin/Val
                 startActivity(studentActivity);
 
             }
