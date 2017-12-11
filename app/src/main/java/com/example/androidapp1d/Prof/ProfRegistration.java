@@ -21,19 +21,23 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class ProfRegistration extends AppCompatActivity {
-    private EditText username, email, staffID, aboutme;
+    private EditText username, email, staffID, aboutme, office;
     private RadioGroup pillartaught;
-    private Button modulesButton, register;
-    private String usernameInput, emailInput, staffIDinput, aboutmeInput, yearInput;
+    private Button modulesButton, register, availabilityPref;
+    private String usernameInput, emailInput, staffIDinput, aboutmeInput, yearInput, officeInput;
     private String[] modulesListItems;
-    private boolean[] checkedModules;
+    private String[] availabilityListItems;
+    private boolean[] checkedModules, checkedAvail;
     private ArrayList<String> selectedmodulesList = new ArrayList<>();
+    private ArrayList<String> selectedAvailabilityList = new ArrayList<>();
     private ArrayList<String> profsList = new ArrayList<>();
    // private ArrayList<String> selectedProfList = new ArrayList<>();
     private AlertDialog.Builder modsbuilder;
+    private AlertDialog.Builder availBuilder;
     private FirebaseDatabase database;
     private DatabaseReference profRef;
     private String replaced;
+    private String days;
     private ProfItem profItem;
 
     @Override
@@ -49,10 +53,10 @@ public class ProfRegistration extends AppCompatActivity {
             pillartaught = (RadioGroup) findViewById(R.id.pillartaught);
             modulesButton = (Button) findViewById(R.id.select_modules);
             register = (Button) findViewById(R.id.register);
-
+            availabilityPref = (Button) findViewById(R.id.availabilityIndicator);
+            office = (EditText)findViewById(R.id.office);
             database = FirebaseDatabase.getInstance();
             profRef = database.getReference().child("Professors");
-
             //register
             register.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -61,12 +65,13 @@ public class ProfRegistration extends AppCompatActivity {
                     emailInput = email.getText().toString().trim();
                     staffIDinput = staffID.getText().toString().trim();
                     aboutmeInput = aboutme.getText().toString().trim();
-                    if (usernameInput.trim().isEmpty() || emailInput.isEmpty() || aboutmeInput.isEmpty()) {
+                    officeInput = office.getText().toString().trim();
+                    if (usernameInput.trim().isEmpty() || emailInput.isEmpty() || aboutmeInput.isEmpty() ||officeInput.isEmpty()) {
                         Toast.makeText(ProfRegistration.this, "Please enter all fields", Toast.LENGTH_SHORT).show();
-                    } else if (selectedmodulesList.isEmpty()) {
+                    } else if (selectedmodulesList.isEmpty() || selectedAvailabilityList.isEmpty()) {
                         Toast.makeText(ProfRegistration.this, "Please select your modules", Toast.LENGTH_SHORT).show();
                     } else {
-                        profItem = new ProfItem(yearInput, aboutmeInput, emailInput,staffIDinput,selectedmodulesList);
+                        profItem = new ProfItem(yearInput, aboutmeInput, emailInput,staffIDinput,officeInput,selectedmodulesList,selectedAvailabilityList);
                         profRef.child(usernameInput).setValue(profItem);
                     }
                 }
@@ -168,6 +173,72 @@ public class ProfRegistration extends AppCompatActivity {
                     }
                 }
             });
+
+            //alert dialog to choose module
+            availabilityPref.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                        checkedAvail = new boolean[availabilityListItems.length];
+                        availabilityListItems = getResources().getStringArray(R.array.Availabilities);
+                        availBuilder = new AlertDialog.Builder(ProfRegistration.this);
+                        availBuilder.setTitle("Select your availability preferences")
+                                .setMultiChoiceItems(availabilityListItems, checkedAvail, new DialogInterface.OnMultiChoiceClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+                                        if (isChecked) {
+                                            if (!selectedAvailabilityList.contains(availabilityListItems[which])){
+                                                selectedAvailabilityList.add(availabilityListItems[which]);
+                                            }
+                                        } else {
+                                            selectedAvailabilityList.remove(availabilityListItems[which]);
+                                        }
+                                    }
+                                })
+                                .setCancelable(false)
+                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        if (selectedAvailabilityList.isEmpty()) {
+                                            Toast.makeText(ProfRegistration.this, "Please select your availabilities", Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            //get profs under th selected availabilities
+                                            for (int i = 0; i < selectedAvailabilityList.size(); i++) {
+                                                days = selectedAvailabilityList.get(i);
+                                                profRef.child(days).addListenerForSingleValueEvent(new ValueEventListener() {
+                                                    @Override
+                                                    public void onDataChange(DataSnapshot dataSnapshot) {
+                                                        for (DataSnapshot profs : dataSnapshot.getChildren()) {
+                                                            if (!profsList.contains(profs.getValue(String.class))) {
+                                                                profsList.add(profs.getValue(String.class));
+                                                            }
+                                                        }
+                                                    }
+                                                    @Override
+                                                    public void onCancelled(DatabaseError databaseError) {
+                                                    }
+                                                });
+                                            }
+                                            Toast.makeText(ProfRegistration.this, "Availabilities selected: \n"
+                                                    + selectedAvailabilityList.toString(), Toast.LENGTH_LONG).show();
+                                            dialog.dismiss();
+                                        }
+                                    }
+                                })
+                                .setNegativeButton("CLEAR ALL", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        for (int i = 0; i < checkedAvail.length; i++) {
+                                            checkedAvail[i] = false;
+                                            selectedAvailabilityList.clear();
+                                        }
+                                        dialog.dismiss();
+                                    }
+                                });
+                        availBuilder.create().show();
+                    }
+
+            });
+
 
         } catch(Exception e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();

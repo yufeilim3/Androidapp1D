@@ -152,4 +152,14 @@
         <item>01.401 Capstone 2</item>
     </string-array>
 
+    <string-array name="Availabilities">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+
 </resources>

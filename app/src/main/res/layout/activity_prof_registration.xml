@@ -41,6 +41,12 @@
                 android:layout_height="wrap_content"
                 android:maxLength="140"
                 android:hint="About Me"/>
+            <EditText
+                android:id="@+id/office"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="140"
+                android:hint="Your Office"/>
 
             <RadioGroup
                 android:id="@+id/pillartaught"
@@ -92,6 +98,16 @@
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
                     android:text="select modules"/>
+                <Button
+                    android:id="@+id/availabilityIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="My Availabilities"/>
+
 
             </RelativeLayout>
 

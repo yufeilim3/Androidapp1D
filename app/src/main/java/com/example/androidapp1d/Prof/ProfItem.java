@@ -7,16 +7,19 @@ import java.util.ArrayList;
  */
 
 public class ProfItem {
-    private String year, description, email, staffID;
+    private String year, description, email, staffID, office;
     private ArrayList<String> mods = new ArrayList<>();
+    private ArrayList<String> availPreference = new ArrayList<>();
 
     public ProfItem(String year, String description, String email,
-                    String staffID, ArrayList<String> mods) {
+                    String staffID, String office, ArrayList<String> mods, ArrayList<String> availPreference) {
         this.year = year;
         this.description = description;
         this.email = email;
         this.staffID = staffID;
         this.mods = mods;
+        this.availPreference = availPreference;
+        this.office = office;
     }
 
     public String getYear() {
@@ -57,5 +60,21 @@ public class ProfItem {
 
     public void setMods(ArrayList<String> mods) {
         this.mods = mods;
+    }
+
+    public ArrayList<String> getAvailPreference() {
+        return availPreference;
+    }
+
+    public void setAvailPreference(ArrayList<String> availPreference) {
+        this.availPreference = availPreference;
+    }
+
+    public String getOffice() {
+        return office;
+    }
+
+    public void setOffice(String office) {
+        this.office = office;
     }
 }
