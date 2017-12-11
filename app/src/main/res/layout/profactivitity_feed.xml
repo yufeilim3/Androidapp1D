@@ -227,7 +227,7 @@
                         android:layout_below="@+id/card03image"
                         android:maxLines="1"
                         android:padding="4dp"
-                        android:text="  Student replied to comment"
+                        android:text="  New comment in Announcements"
                         android:textColor="#222"
                         android:textStyle="bold"
                         android:textSize="22dp" />
@@ -239,7 +239,7 @@
                         android:layout_below="@+id/card03title"
                         android:maxLines="1"
                         android:padding="4dp"
-                        android:text="   1D Checkoff 1 - Errors must test the ALU and ..."
+                        android:text="   2D Demo - For the SAT solver test, are there ..."
                         android:textColor="#666"
                         android:textSize="14dp" />
 
@@ -259,7 +259,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="VIEW"
-                            android:textSize="14dp" />
+                            android:textSize="14dp"
+                            android:onClick="card03ViewDetails"/>
 
                     </LinearLayout>
 
@@ -316,7 +317,7 @@
                         android:layout_below="@+id/card04title"
                         android:maxLines="1"
                         android:padding="4dp"
-                        android:text="   50.002 - Sorry Prof, I'm not feeling well today ..."
+                        android:text="   Sorry Prof, I'm not feeling well today ..."
                         android:textColor="#666"
                         android:textSize="14dp" />
 
@@ -336,7 +337,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="DETAILS"
-                            android:textSize="14dp" />
+                            android:textSize="14dp"
+                            android:onClick="card04ViewDetails"/>
 
                     </LinearLayout>
 

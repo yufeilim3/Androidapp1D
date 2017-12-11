@@ -29,10 +29,17 @@ public class LoginActivity extends AppCompatActivity {
     private RadioButton prof;
     private Button enter;
     private Button register;
+<<<<<<< HEAD
     public static boolean accept1 = false;
     public static boolean reject1 = false;
     public static ArrayList<String> list;
     public static ArrayList<String> list2;
+=======
+    public static boolean accept1 = false; // accept button for consultations in prof feed
+    public static boolean reject1 = false; // reject button for consultations in prof feed
+    public static ArrayList<String> list; // list of blocked students
+
+>>>>>>> origin/tracyfeed
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,8 +49,13 @@ public class LoginActivity extends AppCompatActivity {
         register = (Button) findViewById(R.id.signupbtn);
         student = (RadioButton) findViewById(R.id.student);
         prof = (RadioButton) findViewById(R.id.prof);
+<<<<<<< HEAD
         list = new ArrayList<String>();
         list2 = new ArrayList<String>();
+=======
+
+        list = new ArrayList<String>(); // DO NOT DELETE (for prof reporting students page)
+>>>>>>> origin/tracyfeed
     }
         //register.setOnClickListener(this);
         //enter.setOnClickListener(new View.OnClickListener() {
@@ -84,5 +96,9 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(studentActivity);
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/tracyfeed
 }
 
