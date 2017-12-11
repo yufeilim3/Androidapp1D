@@ -17,6 +17,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.androidapp1d.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class ProfProfileActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     private DrawerLayout drawerLayout;
@@ -24,11 +25,16 @@ public class ProfProfileActivity extends AppCompatActivity implements Navigation
     private ActionBar actionBar;
     private NavigationView navigationView;
     EditText staffid;
+    private FirebaseAuth firebaseAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profactivity_profile);
         getSupportActionBar().setTitle("Your Profile");
+
+        firebaseAuth = FirebaseAuth.getInstance();
+
         drawerLayout =(DrawerLayout)findViewById(R.id.drawerLayout);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.opendrawer, R.string.closedrawer);
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
@@ -178,5 +184,9 @@ public class ProfProfileActivity extends AppCompatActivity implements Navigation
 
         String edittextvalue = staffid.getText().toString();
         staffid.setText(edittextvalue); //saving EditText value
+    }
+
+    private void userLogin(){
+
     }
 }

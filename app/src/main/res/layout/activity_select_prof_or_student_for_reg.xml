@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.androidapp1d.selectProfOrStudentForReg">
+
+    <Button
+        android:id="@+id/amAStud"
+        style="@android:style/Widget.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="89dp"
+        android:background="@color/blueeeee"
+        android:text="I'm a Student!"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:onClick="IamAStudBtn"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="51dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/amAProf"
+        style="@android:style/Widget.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blueeeee"
+        android:text="I'm a Professor!"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="51dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:onClick="IamAProfBtn"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="casual"
+        android:text="Welcome To The Sign Up Page!"
+        android:textColor="@color/endblue"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
