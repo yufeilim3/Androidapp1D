@@ -7,12 +7,12 @@ import java.util.ArrayList;
  */
 
 public class ProfItem {
-    private String year, description, email, staffID, office;
+    private String year, description, email, staffID, office,venue,timeslotsize;
     private ArrayList<String> mods = new ArrayList<>();
     private ArrayList<String> availPreference = new ArrayList<>();
 
     public ProfItem(String year, String description, String email,
-                    String staffID, String office, ArrayList<String> mods, ArrayList<String> availPreference) {
+                    String staffID, String office,String venue,String timeslotsize, ArrayList<String> mods, ArrayList<String> availPreference) {
         this.year = year;
         this.description = description;
         this.email = email;
@@ -20,6 +20,8 @@ public class ProfItem {
         this.mods = mods;
         this.availPreference = availPreference;
         this.office = office;
+        this.venue = venue;
+        this.timeslotsize = timeslotsize;
     }
 
     public String getYear() {
@@ -76,5 +78,21 @@ public class ProfItem {
 
     public void setOffice(String office) {
         this.office = office;
+    }
+
+    public String getTimeslotsize() {
+        return timeslotsize;
+    }
+
+    public void setTimeslotsize(String timeslotsize) {
+        this.timeslotsize = timeslotsize;
+    }
+
+    public String getVenue() {
+        return venue;
+    }
+
+    public void setVenue(String venue) {
+        this.venue = venue;
     }
 }

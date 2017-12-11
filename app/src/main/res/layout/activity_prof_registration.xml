@@ -47,6 +47,20 @@
                 android:layout_height="wrap_content"
                 android:maxLength="140"
                 android:hint="Your Office"/>
+            <EditText
+                android:id="@+id/venue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="140"
+                android:hint="Enter your preferred venue for consultation"/>
+            <EditText
+                android:id="@+id/timeslotsize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your preferred duration for your consultation in minutes"
+                android:layout_below="@+id/venue"
+                android:layout_alignParentStart="true"
+                android:maxLength="140"/>
 
             <RadioGroup
                 android:id="@+id/pillartaught"

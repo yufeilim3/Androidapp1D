@@ -5,10 +5,12 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.androidapp1d.R;
@@ -21,10 +23,10 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class ProfRegistration extends AppCompatActivity {
-    private EditText username, email, staffID, aboutme, office;
+    private EditText username, email, staffID, aboutme, office, venue,timeslotsize;
     private RadioGroup pillartaught;
     private Button modulesButton, register, availabilityPref;
-    private String usernameInput, emailInput, staffIDinput, aboutmeInput, yearInput, officeInput;
+    private String usernameInput, emailInput, staffIDinput, aboutmeInput, yearInput, officeInput,venueInput,timeslotsizeInput;
     private String[] modulesListItems;
     private String[] availabilityListItems;
     private boolean[] checkedModules, checkedAvail;
@@ -46,6 +48,8 @@ public class ProfRegistration extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_prof_registration);
 
+            venue = (EditText) findViewById(R.id.venue);
+            timeslotsize = (EditText) findViewById(R.id.timeslotsize);
             username = (EditText) findViewById(R.id.username);
             email = (EditText) findViewById(R.id.sutd_email);
             staffID = (EditText) findViewById(R.id.staffID);
@@ -57,6 +61,21 @@ public class ProfRegistration extends AppCompatActivity {
             office = (EditText)findViewById(R.id.office);
             database = FirebaseDatabase.getInstance();
             profRef = database.getReference().child("Professors");
+            availabilityListItems = getResources().getStringArray(R.array.Availabilities);
+            /*LayoutInflater inflater = this.getLayoutInflater();
+            final View dialogView = inflater.inflate(R.layout.alert_dialog_venue_timeslot_size, null);
+
+            EditText venue = (EditText) dialogView.findViewById(R.id.venue);
+            EditText timeslotsize = (EditText) dialogView.findViewById(R.id.timeslotsize);*/
+
+           /* final EditText timeslotsize = new EditText(this);
+            timeslotsize.setHint("Enter your preferred consultation slot duration");
+            final EditText venue = new EditText(this);
+            venue.setHint("Enter your preferred consultation venue");
+            final RelativeLayout layout = new RelativeLayout(getApplicationContext());
+            layout.addView(timeslotsize);
+            layout.addView(venue);*/
+
             //register
             register.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -66,12 +85,14 @@ public class ProfRegistration extends AppCompatActivity {
                     staffIDinput = staffID.getText().toString().trim();
                     aboutmeInput = aboutme.getText().toString().trim();
                     officeInput = office.getText().toString().trim();
-                    if (usernameInput.trim().isEmpty() || emailInput.isEmpty() || aboutmeInput.isEmpty() ||officeInput.isEmpty()) {
+                    venueInput = venue.getText().toString().trim();
+                    timeslotsizeInput = timeslotsize.getText().toString().trim();
+                    if (usernameInput.trim().isEmpty() || emailInput.isEmpty() || aboutmeInput.isEmpty() ||officeInput.isEmpty() || venueInput.isEmpty() || timeslotsizeInput.isEmpty()) {
                         Toast.makeText(ProfRegistration.this, "Please enter all fields", Toast.LENGTH_SHORT).show();
                     } else if (selectedmodulesList.isEmpty() || selectedAvailabilityList.isEmpty()) {
                         Toast.makeText(ProfRegistration.this, "Please select your modules", Toast.LENGTH_SHORT).show();
                     } else {
-                        profItem = new ProfItem(yearInput, aboutmeInput, emailInput,staffIDinput,officeInput,selectedmodulesList,selectedAvailabilityList);
+                        profItem = new ProfItem(yearInput, aboutmeInput, emailInput,staffIDinput,officeInput,venueInput,timeslotsizeInput,selectedmodulesList,selectedAvailabilityList);
                         profRef.child(usernameInput).setValue(profItem);
                     }
                 }
@@ -174,12 +195,11 @@ public class ProfRegistration extends AppCompatActivity {
                 }
             });
 
-            //alert dialog to choose module
+            //alert dialog to choose availability
             availabilityPref.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                         checkedAvail = new boolean[availabilityListItems.length];
-                        availabilityListItems = getResources().getStringArray(R.array.Availabilities);
                         availBuilder = new AlertDialog.Builder(ProfRegistration.this);
                         availBuilder.setTitle("Select your availability preferences")
                                 .setMultiChoiceItems(availabilityListItems, checkedAvail, new DialogInterface.OnMultiChoiceClickListener() {
@@ -194,6 +214,7 @@ public class ProfRegistration extends AppCompatActivity {
                                         }
                                     }
                                 })
+                               // .setView(dialogView)
                                 .setCancelable(false)
                                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                     @Override
