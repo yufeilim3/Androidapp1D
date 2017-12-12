@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.androidapp1d.LoginActivity;
 import com.example.androidapp1d.R;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -69,6 +70,9 @@ public class ProfProfileActivity extends AppCompatActivity implements Navigation
                     case (R.id.side_profile):
                         drawerLayout.closeDrawer(navigationView);
                         break;
+                    case(R.id.side_logout):
+                        Intent k = new Intent(ProfProfileActivity.this,LoginActivity.class);
+                        startActivity(k);
                 }
                 return  false;
             }

@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.androidapp1d.LoginActivity;
 import com.example.androidapp1d.R;
 import com.example.androidapp1d.Stud.Feed.StudFeedActivity;
 import com.example.androidapp1d.Stud.Profile.StudProfileActivity;
@@ -141,6 +142,9 @@ public class StudProfDetails extends AppCompatActivity implements NavigationView
                             Intent j= new Intent(StudProfDetails.this,StudSearchActivity.class);
                             startActivity(j);
                             break;
+                        case(R.id.side_logout):
+                            Intent k = new Intent(StudProfDetails.this,LoginActivity.class);
+                            startActivity(k);
                     }
                     return  false;
                 }
@@ -169,6 +173,9 @@ public class StudProfDetails extends AppCompatActivity implements NavigationView
                             Intent j= new Intent(StudProfDetails.this,StudSearchActivity.class);
                             startActivity(j);
                             break;
+                        case(R.id.side_logout):
+                            Intent k = new Intent(StudProfDetails.this,LoginActivity.class);
+                            startActivity(k);
                     }
                     return false;
                 }

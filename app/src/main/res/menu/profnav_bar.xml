@@ -13,5 +13,9 @@
         android:id="@+id/side_profile"
         android:title="Profile"
         />
+    <item
+        android:id="@+id/side_logout"
+        android:title="Log Out"/>
+
 
 </menu>

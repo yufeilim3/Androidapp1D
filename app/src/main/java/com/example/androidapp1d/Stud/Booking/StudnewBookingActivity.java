@@ -16,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TabHost;
 
+import com.example.androidapp1d.LoginActivity;
 import com.example.androidapp1d.R;
 import com.example.androidapp1d.Stud.Feed.StudFeedActivity;
 import com.example.androidapp1d.Stud.Profile.StudProfileActivity;
@@ -137,6 +138,10 @@ public class StudnewBookingActivity extends AppCompatActivity implements Navigat
                         Intent j= new Intent(StudnewBookingActivity.this,StudSearchActivity.class);
                         startActivity(j);
                         break;
+
+                    case(R.id.side_logout):
+                        Intent k = new Intent(StudnewBookingActivity.this,LoginActivity.class);
+                        startActivity(k);
                 }
                 return  false;
             }
@@ -169,6 +174,9 @@ public class StudnewBookingActivity extends AppCompatActivity implements Navigat
                         Intent j= new Intent(StudnewBookingActivity.this,StudSearchActivity.class);
                         startActivity(j);
                         break;
+                    case(R.id.side_logout):
+                        Intent k = new Intent(StudnewBookingActivity.this,LoginActivity.class);
+                        startActivity(k);
                 }
                 return false;
             }

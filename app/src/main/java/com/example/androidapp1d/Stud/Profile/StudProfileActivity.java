@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.androidapp1d.LoginActivity;
 import com.example.androidapp1d.R;
 import com.example.androidapp1d.Stud.Feed.StudFeedActivity;
 import com.example.androidapp1d.Stud.Booking.StudBookingActivity;
@@ -62,6 +63,10 @@ public class StudProfileActivity extends AppCompatActivity implements Navigation
                     case (R.id.side_profile):
                         drawerLayout.closeDrawer(navigationView);
                         break;
+                    case (R.id.side_logout):
+                        Intent j= new Intent(StudProfileActivity.this,LoginActivity.class);
+                        startActivity(j);
+                        break;
                 }
                 return  false;
             }
@@ -91,6 +96,10 @@ public class StudProfileActivity extends AppCompatActivity implements Navigation
                     case(R.id.ic_search):
                         Intent j= new Intent(StudProfileActivity.this,StudSearchActivity.class);
                         startActivity(j);
+                        break;
+                    case (R.id.side_logout):
+                        Intent k= new Intent(StudProfileActivity.this,LoginActivity.class);
+                        startActivity(k);
                         break;
                 }
                 return false;

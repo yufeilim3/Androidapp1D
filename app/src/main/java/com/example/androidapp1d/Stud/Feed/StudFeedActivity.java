@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.androidapp1d.LoginActivity;
 import com.example.androidapp1d.R;
 import com.example.androidapp1d.Stud.Booking.StudBookingActivity;
 import com.example.androidapp1d.Stud.Booking.StudnewBookingActivity;
@@ -108,6 +109,9 @@ public class StudFeedActivity extends AppCompatActivity implements NavigationVie
                             Intent i = new Intent(StudFeedActivity.this, StudProfileActivity.class);
                             startActivity(i);
                             break;
+                        case(R.id.side_logout):
+                            Intent k = new Intent(StudFeedActivity.this,LoginActivity.class);
+                            startActivity(k);
                     }
                     return false;
                 }
@@ -136,6 +140,9 @@ public class StudFeedActivity extends AppCompatActivity implements NavigationVie
                             Intent j = new Intent(StudFeedActivity.this, StudSearchActivity.class);
                             startActivity(j);
                             break;
+                        case(R.id.side_logout):
+                            Intent k = new Intent(StudFeedActivity.this,LoginActivity.class);
+                            startActivity(k);
                     }
                     return false;
                 }

@@ -75,6 +75,11 @@ public class ProfFeedActivity extends AppCompatActivity implements NavigationVie
                         Intent i= new Intent(ProfFeedActivity.this,ProfProfileActivity.class);
                         startActivity(i);
                         break;
+
+                    case(R.id.side_logout):
+                        Intent k = new Intent(ProfFeedActivity.this,LoginActivity.class);
+                        startActivity(k);
+                        break;
                 }
                 return  false;
             }

@@ -21,6 +21,7 @@ import android.view.View;
 import android.widget.TabHost;
 import android.widget.Toast;
 
+import com.example.androidapp1d.LoginActivity;
 import com.example.androidapp1d.R;
 import com.example.androidapp1d.Stud.Feed.StudFeedActivity;
 import com.example.androidapp1d.Stud.Profile.StudProfileActivity;
@@ -238,6 +239,10 @@ public class StudBookingActivity extends AppCompatActivity implements Navigation
                         Intent j= new Intent(StudBookingActivity.this,StudSearchActivity.class);
                         startActivity(j);
                         break;
+
+                    case(R.id.side_logout):
+                        Intent k = new Intent(StudBookingActivity.this,LoginActivity.class);
+                        startActivity(k);
                 }
                 return  false;
             }

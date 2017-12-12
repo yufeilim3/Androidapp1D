@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.androidapp1d.LoginActivity;
 import com.example.androidapp1d.R;
 import com.example.androidapp1d.Stud.Booking.StudnewBookingActivity;
 import com.example.androidapp1d.Stud.Feed.StudFeedActivity;
@@ -61,6 +62,10 @@ public class StudSearchActivity extends AppCompatActivity {
                         break;
                     case(R.id.ic_search):
                         break;
+
+                    case(R.id.side_logout):
+                        Intent k = new Intent(StudSearchActivity.this,LoginActivity.class);
+                        startActivity(k);
                 }
                 return false;
             }

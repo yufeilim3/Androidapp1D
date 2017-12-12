@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 
+import com.example.androidapp1d.LoginActivity;
 import com.example.androidapp1d.R;
 
 import java.util.ArrayList;
@@ -94,6 +95,9 @@ public class ProfBookingActivity extends AppCompatActivity implements Navigation
                         Intent j= new Intent(ProfBookingActivity.this,ProfSearchActivity.class);
                         startActivity(j);
                         break;
+                    case(R.id.side_logout):
+                        Intent k = new Intent(ProfBookingActivity.this,LoginActivity.class);
+                        startActivity(k);
                 }
                 return  false;
             }
@@ -124,7 +128,14 @@ public class ProfBookingActivity extends AppCompatActivity implements Navigation
                         Intent j= new Intent(ProfBookingActivity.this,ProfSearchActivity.class);
                         startActivity(j);
                         break;
+                    case(R.id.side_logout):
+                        Intent k = new Intent(ProfBookingActivity.this,LoginActivity.class);
+                        startActivity(k);
+                        break;
+
                 }
+
+
                 return false;
             }
         });

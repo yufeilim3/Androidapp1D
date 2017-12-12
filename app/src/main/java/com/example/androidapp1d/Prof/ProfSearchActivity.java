@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.androidapp1d.LoginActivity;
 import com.example.androidapp1d.R;
 
 import java.util.ArrayList;
@@ -58,6 +59,9 @@ public class ProfSearchActivity extends AppCompatActivity {
                         break;
                     case(R.id.ic_search):
                         break;
+                    case(R.id.side_logout):
+                        Intent k = new Intent(ProfSearchActivity.this,LoginActivity.class);
+                        startActivity(k);
                 }
                 return false;
             }
